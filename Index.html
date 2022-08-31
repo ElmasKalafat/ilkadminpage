@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="../ilkadminsayfasi/css/index.css">
+    
+    <title>Anasayfa</title>
+</head>
+<body>
+  <header>
+    <div class="menu_bar">
+      <div class="user">
+        <img src="" alt="">
+        
+      </div>
+        
+            <ul>
+              <li class="active"><a href="./Index.html"><i class="fas fa-home"></i>
+                <span class="title">Anasayfa</span></a></li>
+                <li class=""><a href="./personel.html"><i class="fas fa-user"></i>
+                <span class="title">Personeller</span></a></li>
+                <li class=""><a href="./Sirketler.html"><i class="fas fa-edit"></i>
+                <span class="title">Şirketler</span></a></li>
+                <li class=""><a href="./merdiven.html"><i class="fas fa-users"></i>
+                <span class="title">Merdiven-Kapıcı</span></a></li>
+                <li class=""><a href="./araclar.html"><i class="fas fa-car"></i>
+                <span class="title">Araçlar</span></a></li>
+                <li class=""><a href="./gunluklıst.html"><i class="fas fa-check"></i>
+                <span class="title">Günlük Plan</span></a></li>
+                <li class=""><a href="./homeIndexPage.html"><i class="fas fa-close"></i>
+                <span class="title">Çıkış</span></a></li>
+            </ul>
+        
+    </div>
+
+  </header>
+    
+
+<main>
+  <div class="allthem">
+
+    <div id="container">
+    <div id="header">
+      <div id="monthDisplay"></div>
+      <div>
+        <button id="backButton">Geri</button>
+        <button id="nextButton">İleri</button>
+      </div>
+    </div>
+
+    <div id="weekdays">
+      <div>Pazartesi</div>
+      <div class="sal">Salı</div>
+      <div class="car">Çarşamba</div>
+      <div class="per">Perşembe</div>
+      <div class="cum">Cuma</div>
+      <div class="cmt">Cumartesi</div>
+      <div>Pazar</div>
+    </div>
+
+    <div id="calendar"></div>
+  </div>
+
+  <div id="newEventModal">
+    <h2>Yeni olay</h2>
+
+    <input id="eventTitleInput" placeholder="Yazınız." />
+    <input id="tarih" type="text" placeholder="Başlangıç günü seçiniz">
+    <input id="tarihbitis" type="text" placeholder="Bitiş günü seçiniz">
+
+
+    <button id="saveButton">Kaydet</button>
+    <button id="cancelButton">Kapat</button>
+  </div>
+
+  <div id="deleteEventModal">
+    <h2>Olaylar</h2>
+
+    <p id="eventText"></p>
+    
+
+    <button id="deleteButton">Sil</button>
+    <button id="closeButton">Kapat</button>
+  </div>
+
+  <div id="modalBackDrop"></div>
+
+
+
+  </div>
+
+</main>
+  
+  
+
+        
+
+   
+
+        <script src="./javascript/index.js"></script>
+
+        <script>
+          $( "#tarih" ).datepicker({
+ 
+        dateFormat: "dd-mm-yy",
+        altFormat: "yy-mm-dd",
+        altField:"#tarih-db",
+        monthNames: [ "Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık" ],
+        dayNamesMin: [ "Pa", "Pt", "Sl", "Ça", "Pe", "Cu", "Ct" ],
+        firstDay:1
+      });
+
+      $( "#tarihbitis" ).datepicker({
+ 
+      dateFormat: "dd-mm-yy",
+      altFormat: "yy-mm-dd",
+      altField:"#tarih-db",
+      monthNames: [ "Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık" ],
+      dayNamesMin: [ "Pa", "Pt", "Sl", "Ça", "Pe", "Cu", "Ct" ],
+      firstDay:1
+     });
+
+
+      
+        </script>
+</body>
+</html>

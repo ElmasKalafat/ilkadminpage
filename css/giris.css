@@ -1,0 +1,17 @@
+#toggle {
+    position: absolute;
+    top: 56%;
+    right: 60px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background: url(../css/resim/eyeshow.png);
+    background-size: cover;
+    cursor: pointer;
+
+}
+
+#toggle.hidden {
+    background: url(../css/resim/eyehidden.png);
+    background-size: cover;
+}
